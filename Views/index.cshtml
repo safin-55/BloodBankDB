@@ -1,0 +1,31 @@
+@model List<BloodBankApp.Models.Donor>
+
+<h2>Donors</h2>
+
+<a href="/Donors/Create">Add New Donor</a>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Full Name</th>
+        <th>Blood Group</th>
+        <th>Contact</th>
+        <th>City</th>
+        <th>Last Donation</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var donor in Model)
+    {
+        <tr>
+            <td>@donor.FullName</td>
+            <td>@donor.BloodGroup</td>
+            <td>@donor.ContactNo</td>
+            <td>@donor.City</td>
+            <td>@donor.LastDonationDate?.ToString("yyyy-MM-dd")</td>
+            <td>
+                <a href="/Donors/Edit/@donor.DonorId">Edit</a> |
+                <a href="/Donors/Delete/@donor.DonorId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

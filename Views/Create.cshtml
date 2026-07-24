@@ -1,0 +1,37 @@
+@model BloodBankApp.Models.Donor
+
+<h2>Add Donor</h2>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div style="color:red">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+
+<form action="/Donors/Create" method="post" novalidate>
+    <p>
+        Full Name: <br />
+        <input type="text" name="FullName" value="@Model?.FullName" />
+    </p>
+    <p>
+        Blood Group: <br />
+        <input type="text" name="BloodGroup" value="@Model?.BloodGroup" />
+    </p>
+    <p>
+        Contact No: <br />
+        <input type="text" name="ContactNo" value="@Model?.ContactNo" />
+    </p>
+    <p>
+        City: <br />
+        <input type="text" name="City" value="@Model?.City" />
+    </p>
+    <p>
+        Last Donation Date: <br />
+        <input type="date" name="LastDonationDate" value="@Model?.LastDonationDate?.ToString("yyyy-MM-dd")" />
+    </p>
+    <button type="submit">Save</button>
+</form>
