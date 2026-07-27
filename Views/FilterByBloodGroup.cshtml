@@ -1,0 +1,26 @@
+@model List<BloodBankApp.Models.Donor>
+
+<h2>Filter Donors by Blood Group</h2>
+
+<form action="/Reports/FilterByBloodGroup" method="get">
+    <select name="bloodGroup">
+        <option value="">-- All --</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+    </select>
+    <button type="submit">Filter</button>
+</form>
+
+<table border="1" cellpadding="5">
+    <tr><th>Full Name</th><th>Blood Group</th><th>City</th></tr>
+    @foreach (var donor in Model)
+    {
+        <tr><td>@donor.FullName</td><td>@donor.BloodGroup</td><td>@donor.City</td></tr>
+    }
+</table>

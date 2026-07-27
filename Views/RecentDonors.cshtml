@@ -1,0 +1,11 @@
+@model List<BloodBankApp.Models.Donor>
+
+<h2>Donors Sorted by Last Donation Date</h2>
+
+<table border="1" cellpadding="5">
+    <tr><th>Full Name</th><th>Last Donation Date</th></tr>
+    @foreach (var donor in Model)
+    {
+        <tr><td>@donor.FullName</td><td>@donor.LastDonationDate?.ToString("yyyy-MM-dd")</td></tr>
+    }
+</table>

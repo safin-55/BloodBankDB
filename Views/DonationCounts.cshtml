@@ -1,0 +1,11 @@
+@model List<BloodBankApp.Models.DonorDonationCount>
+
+<h2>Total Donations per Donor</h2>
+
+<table border="1" cellpadding="5">
+    <tr><th>Full Name</th><th>Total Donations</th></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.FullName</td><td>@item.TotalDonations</td></tr>
+    }
+</table>
