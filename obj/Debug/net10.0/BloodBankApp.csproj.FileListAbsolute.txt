@@ -222,3 +222,4 @@
 /Users/mdsafinahamedsohag/Documents/Advance.net/BloodBankApp/obj/Debug/net10.0/BloodBankApp.pdb
 /Users/mdsafinahamedsohag/Documents/Advance.net/BloodBankApp/obj/Debug/net10.0/BloodBankApp.genruntimeconfig.cache
 /Users/mdsafinahamedsohag/Documents/Advance.net/BloodBankApp/obj/Debug/net10.0/ref/BloodBankApp.dll
+/Users/mdsafinahamedsohag/Documents/Advance.net/BloodBankApp/obj/Debug/net10.0/BloodBankApp.sourcelink.json
